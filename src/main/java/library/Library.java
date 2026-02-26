@@ -8,7 +8,7 @@ import library.exception.DuplicateBookException;
 
 public class Library {
 
-    private Map<Long, Book> books = new HashMap<>();
+    private Map<String, Book> books = new HashMap<>();
 
     public Book findBookByTitle(String title) {
         return books.values().stream()
@@ -55,6 +55,6 @@ public class Library {
     }
 
     public Book searchBookByISBN(long ISBN) {
-        return books.get(ISBN);
+        return books.get(String.valueOf(ISBN));
     }
 }

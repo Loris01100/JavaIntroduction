@@ -1,7 +1,7 @@
 package library.exception;
 public class DuplicateBookException extends LibraryException {
 
-    public DuplicateBookException(long ISBN) {
+    public DuplicateBookException(String ISBN) {
         super("Livre déjà présent : " + ISBN);
     }
     

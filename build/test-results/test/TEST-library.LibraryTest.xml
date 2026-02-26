@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="library.LibraryTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-02-26T10:01:02.304Z" hostname="fedora" time="0.199">
+  <properties/>
+  <testcase name="[1] clean code" classname="library.LibraryTest" time="0.075"/>
+  <testcase name="[2] CLEAN CODE" classname="library.LibraryTest" time="0.002"/>
+  <testcase name="[3] Clean Code" classname="library.LibraryTest" time="0.001"/>
+  <testcase name="shouldDeleteExistingBook()" classname="library.LibraryTest" time="0.003"/>
+  <testcase name="[1] null" classname="library.LibraryTest" time="0.003"/>
+  <testcase name="[2] " classname="library.LibraryTest" time="0.002"/>
+  <testcase name="shouldThrowWhenDeletingNonExistentBook()" classname="library.LibraryTest" time="0.001"/>
+  <testcase name="shouldThrowWhenBookNotFound()" classname="library.LibraryTest" time="0.001"/>
+  <testcase name="shouldThrowOnDuplicateISBN()" classname="library.LibraryTest" time="0.003"/>
+  <testcase name="shouldFindBookByTitle()" classname="library.LibraryTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

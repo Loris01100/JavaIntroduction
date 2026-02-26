@@ -30,8 +30,10 @@ public class Library {
         }
     }
 
-    public boolean deleteBook(Book book) {
-        return books.remove(book.getISBN()) != null;
+    public void deleteBook(Book book) {
+        if (books.remove(book.getISBN()) == null) {
+            throw new BookNotFoundException(String.valueOf(book.getISBN()));
+        }
     }
 
     public Book searchBookByTitle(String title) {

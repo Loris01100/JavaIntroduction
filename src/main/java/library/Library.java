@@ -1,17 +1,27 @@
+package library;
+
 import java.util.HashMap;
 import java.util.Map;
+
+import library.exception.BookNotFoundException;
+import library.exception.DuplicateBookException;
 
 public class Library {
 
     private Map<Long, Book> books = new HashMap<>();
 
-    public boolean addBook(Book book) {
+    public Book findBookByTitle(String title) {
+        return books.values().stream()
+            .filter(book -> book.getTitle().equalsIgnoreCase(title))
+            .findFirst()
+            .orElseThrow(() -> new BookNotFoundException(title));
+    }
+
+    public void addBook(Book book) {
         if (books.containsKey(book.getISBN())) {
-            System.out.println("Un livre avec cet ISBN existe déjà : " + book.getISBN());
-            return false;
+            throw new DuplicateBookException(book.getISBN());
         }
         books.put(book.getISBN(), book);
-        return true;
     }
 
     public void displayBooks() {

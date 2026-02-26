@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Book {
 
     private String title;
@@ -12,20 +14,25 @@ public class Book {
         this.ISBN = ISBN;
     }
 
-    public String getTitle() {
-        return title;
+    public long getISBN() { return ISBN; }
+    public String getTitle() { return title; }
+    public String getAuthor() { return author; }
+
+    public void setISBN(long ISBN) { this.ISBN = ISBN; }
+    public void setTitle(String title) { this.title = title; }
+    public void setAuthor(String author) { this.author = author; }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Book)) return false;
+        Book book = (Book) o;
+        return ISBN == book.ISBN;
     }
 
-    public String getAuthor() {
-        return author;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public long getISBN() {
-        return ISBN;
+    @Override
+    public int hashCode() {
+        return Objects.hash(ISBN);
     }
 
     @Override
